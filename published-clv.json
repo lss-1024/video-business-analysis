@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "publicationId": "initial-empty",
+  "classification": "published",
+  "generatedAt": "2026-10-19T00:00:00+00:00",
+  "settings": {
+    "cutoff": "2026-10-19",
+    "horizon": 90
+  },
+  "validation": {
+    "status": "not_requested"
+  },
+  "rows": []
+}

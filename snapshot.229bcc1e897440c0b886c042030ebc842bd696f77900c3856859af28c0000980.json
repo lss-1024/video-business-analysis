@@ -1,0 +1,101 @@
+{
+  "title": "商业分析综合看板",
+  "status": "template",
+  "generatedAt": "2026-10-19T00:00:00Z",
+  "filters": [],
+  "queries": {
+    "orders": {
+      "rows": [],
+      "source": {
+        "label": "当前页面本地导入 orders.csv；未连接外部系统",
+        "files": [
+          "orders.csv"
+        ],
+        "metricDefinitions": [
+          {
+            "label": "客户口径",
+            "definition": "截止日以前，净额为正的订单合并为客户自然日购买场合；完整历史决定首购、复购及购买间隔。"
+          }
+        ]
+      }
+    },
+    "channel": {
+      "rows": [],
+      "source": {
+        "label": "用户本地导入 channel_daily.csv",
+        "files": [
+          "channel_daily.csv"
+        ],
+        "metricDefinitions": [
+          {
+            "label": "渠道效率",
+            "definition": "互斥归因收入总和除以全渠道费用总和；获客费用已包含在总费用中。"
+          }
+        ]
+      }
+    },
+    "price": {
+      "rows": [],
+      "source": {
+        "label": "用户本地导入 price_comparisons.csv 或手动定价情景",
+        "files": [
+          "price_comparisons.csv"
+        ],
+        "metricDefinitions": [
+          {
+            "label": "促销保毛利",
+            "definition": "固定单位成本；销量倍数=(原价-成本)/(促销价-成本-新增单位促销费用)。"
+          }
+        ]
+      }
+    },
+    "survival": {
+      "rows": [],
+      "source": {
+        "label": "用户定义事件后的 survival_events.csv",
+        "files": [
+          "survival_events.csv"
+        ],
+        "metricDefinitions": [
+          {
+            "label": "Kaplan–Meier",
+            "definition": "KM文献补充；风险集连乘，同刻先事件后删失；Greenwood log-log 95%点区间。视频完整估计设定尚未核实。"
+          }
+        ]
+      }
+    },
+    "clv": {
+      "rows": [],
+      "source": {
+        "label": "外部导入或本地文献模型生成 clv_predictions.csv",
+        "files": [
+          "clv_predictions.csv"
+        ],
+        "metricDefinitions": [
+          {
+            "label": "CLV 边界",
+            "definition": "外部预测或文献补充BG/NBD+Gamma-Gamma有限期预测；同人同窗口偏差及CAC占比；不能视为老师内部代码复现。"
+          }
+        ]
+      }
+    },
+    "returns": {
+      "rows": [],
+      "source": {
+        "label": "本地导入 return_series.csv",
+        "files": [
+          "return_series.csv"
+        ],
+        "metricDefinitions": [
+          {
+            "label": "周期夏普 / ROI适配",
+            "definition": "实际值减基准的均值除以样本标准差；不自动年化；业务ROI不冒称金融夏普。"
+          }
+        ]
+      }
+    }
+  },
+  "surface": "dashboard",
+  "id": "dashboard:c70c617f-0271-4288-b3a6-3420eb97c5e8",
+  "buildStatus": "complete"
+}
