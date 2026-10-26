@@ -2,7 +2,7 @@ import {loadPyodide} from './pyodide.mjs';
 let ready;
 async function initialize(){
   const py=await loadPyodide({indexURL:new URL('./',import.meta.url).href});
-  const response=await fetch(new URL('./reviewed-data.zip?v=5a9e5e63067bb4f0',import.meta.url));
+  const response=await fetch(new URL('./reviewed-data.zip?v=3616efec4aae1532',import.meta.url));
   if(!response.ok)throw Error('已发布底表未能加载，请刷新重试。');
   py.unpackArchive(new Uint8Array(await response.arrayBuffer()),'zip',{extractDir:'/published'});
   py.runPython("import sys\nsys.path.insert(0,'/published/business/decision-engine')\nimport browser_bridge");
